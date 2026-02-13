@@ -96,12 +96,7 @@ Path = ./fonts/,
 \newfontfamily\montserratLight{Montserrat-Light.ttf}[
 Path = ./fonts/,
 ]
-% Try to load Eveleth-Regular.ttf, if fails load League-Spartan.ttf
-\IfFontExistsTF{./fonts/Eveleth-Regular.ttf}{
-	\newfontfamily\eveleth{Eveleth-Regular.ttf}[Path=./fonts/]
-}{
-	\newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fonts/]
-}
+\newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fonts/]
 
 % --- Colors ---
 \definecolor{maintext}{HTML}{000000}
