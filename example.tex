@@ -1,0 +1,168 @@
+\documentclass[]{daggerheart}
+
+\usepackage[]{lipsum}
+
+
+\title{A Test Adventure}
+\subtitle{A Latex template}
+\author{Grille}
+
+
+\begin{document}
+	\maketitle
+	
+	\begin{multicols}{2}
+	
+	\tableofcontents
+	\columnbreak
+	
+	\setsectioncolor{gold}{black}
+	\setsubsubsectioncolor{gold}
+	\section{Introduction}
+	\lipsum[1]
+	
+	\subsection{Some Boxes}
+	\begin{squarebox}
+		\lipsum[4][1-5]
+	\end{squarebox}
+	
+	\setboxcolor{dg-red}
+	\begin{squarebox}
+		\textcolor{white}{\textbf{Box Heading} \\ \lipsum[1][1-10]}
+	\end{squarebox}
+	
+	\begin{roundedbox}
+		\lipsum[2]
+	\end{roundedbox}
+	
+	\begin{quotebox}
+	\lipsum[3][1-3]
+	\end{quotebox}
+	
+	\subsection{Adversaries}
+	\adversary{Volcanic Dragon: \\ Obsidian Predator}
+	{Tier 4 Solo}
+	{A massive winged creature with obsidian scales and impossibly sharp claws.}
+	{Defend lair, dive-bomb, fly, hunt, intimidate}
+	{\adversarystats{19}{33/65}{6}{5}{+8}{Obsidian Claws}{Close}{4d10+4 phy}
+	\myseparator
+	\textbf{Experiences:} Hunt from Above +5}
+	{\textbf{Flying - Passive:} While flying, the Obsidian Predator gains +3 to their Difficulty.}
+	
+	\adversary{Luna}
+	{Wildeborn Farie (she/her)}
+	{}
+	{survive, cover in fear, insult the PCs for being late}
+	{	\adversarystats{12}{6/12}{4}{3}{}{}{}{}
+		\myseparator
+		\textbf{Experiences:} Tracker +4, Villager +4
+	}
+	{}
+		
+	\subsection{Environments}
+	\environment{Cliffside Ascent}
+	{Tier 1 Traversal}
+	{A steep, rocky cliffside tall enough to make traversal dangerous.}{Cast the unready down to a rocky doom, draw people in with  promise of what lies at the top}
+	{\environmentstats{12}{Constructs, Deeproot Defender, Giant Scorpion, Glass Snake}}{\textbf{The Climb - Passive:} Climbing up the cliffside uses a Progress Countdown (12).
+	\begin{itemize}
+		\item \textbf{Critical Success:} Tick down 3
+		\item \textbf{Failure with Fear:} Tick up 1
+	\end{itemize}}	
+
+
+	\environment{Test}
+	{Tier 1 Test}
+	{A big test}
+	{}
+	{\environmentstats{12}{}}
+	{}
+	 
+	\columnbreak
+	\subsection{Some other Things}
+
+	\lipsum[1]
+	
+	\subsubsection{Test}	
+	\ColoredTable{0.48\textwidth}{gold}{
+		\textcolor{white}{1D12} & \textbf{\textcolor{white}{OBJECTIVE}} \\
+		1 & Acquire (obtain or steal) an important item or items.\\
+		2 & Capture one or more opponents.\\
+		3 & Activate a magical device. \\
+		4 & Frame a character or tarnish their reputation.\\
+	}
+	
+	\columnbreak
+	
+	\lipsum[4]
+	
+	\subsubsection{An Image}
+	
+	\lipsum[7]
+	
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{photos/bird.JPG}
+	\end{center}
+	\vspace{-0.5cm}
+	
+	\begin{tikzpicture}[remember picture,overlay,shift={(current page.south west)}]
+		\node[anchor=south west ,xshift=-0.5cm,yshift=-0.5cm]{\includegraphics[width=\linewidth]{photos/goat.png}};
+	\end{tikzpicture}
+
+	\lipsum[10][1-10]
+	
+	\pagebreak
+	
+	\begin{tikzpicture}[remember picture,overlay,shift={(current page.north)}]
+		\node[anchor=north ,xshift=-4.5cm,yshift=0cm]{\includegraphics[height=11cm]{photos/deer.jpg}};
+	\end{tikzpicture}
+	
+	%\raggedbottom\enlargethispage{-5cm}
+	
+
+	\fullpage{
+		\setsectioncolor{dg-darkgreen}{dg-darkgreen}
+		\vspace{8.5cm}
+		\section{Chapter One}
+		\subsection{Preparing}
+		\lipsum[1]			
+	}
+	
+	
+	\lipsum[1-5]
+	
+	\fullpage{
+	    \subsection{A Wide Table}
+		
+		\ColoredTable{\textwidth}{dg-darkgreen}{
+			\textcolor{white}{ROLL} & \textcolor{white}{SPRINT} & \textcolor{white}{LEAP} & \textcolor{white}{MANEUVER} \\
+	
+			5  & Sprint within Close range across an open field with an enemy present. 
+			& Make a running jump of half your height (about 3 feet for a human). 
+			& Walk slowly across a narrow beam. \\
+			
+			10 & Sprint within Far range across an open field with an enemy present. 
+			& Make a running jump of your height (about 6 feet for a human). 
+			& Walk quickly across a narrow beam. \\
+			
+			15 & Sprint within Close range across rough terrain with an enemy present. 
+			& Make a running jump of double your height (about 12 feet for a human). 
+			& Run across a narrow beam. \\
+			
+			20 & Sprint within Close range through an active battle of multiple enemies. 
+			& Make a running jump of three times your height (about 18 feet for a human). 
+			& Run across a narrow beam in heavy wind. \\
+			
+			25 & Sprint within Far range through a pitched battle in rough terrain. 
+			& Make a running jump of five times your height (about 30 feet for a human). 
+			& Run across a very narrow beam in an active rainstorm. \\
+			
+			30 & Sprint across the heads of your enemies in a pitched battle. 
+			& Make a running jump of ten times your height (about 60 feet for a human). 
+			& Run across an inch-wide, oil-slicked beam in an active rainstorm. \\
+		}	
+	}
+	
+	\lipsum[1-2]
+	
+	\end{multicols}
+\end{document}
